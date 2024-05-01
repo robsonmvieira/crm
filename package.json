@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "vitest",
+    "test:e2e": "npx playwright test",
+    "test:e2e-ui": "npx playwright test --ui"
+
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
@@ -26,10 +30,13 @@
     "zod": "^3.23.5"
   },
   "devDependencies": {
+    "@playwright/test": "^1.43.1",
+    "@testing-library/react": "^15.0.5",
     "@types/node": "^20",
     "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.3",
     "eslint-config-prettier": "^9.1.0",
@@ -40,9 +47,11 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.2",
+    "jsdom": "^24.0.0",
     "postcss": "^8",
     "prettier": "^3.2.5",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.3"
   }
 }
