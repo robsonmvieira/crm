@@ -1,12 +1,9 @@
-import type { Metadata } from 'next'
-import { Nunito } from 'next/font/google'
 import Banner from './components/banner'
-
-const nunito = Nunito({ subsets: ['latin'] })
+import { type Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'CRM App',
-  description: 'The CRM App'
+  title: 'Auth Page',
+  description: 'The CRM Auth App'
 }
 
 export default function RootLayout({
@@ -15,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <div className={`${nunito.className} min-h-screen grid grid-cols-2`}>
+    <div className={`min-h-screen grid grid-cols-2`}>
       <Banner />
       {children}
     </div>
