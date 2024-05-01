@@ -123,7 +123,7 @@ function Login() {
                 text-sm 
                 font-normal 
                 text-muted-foreground 
-                mr-0 pr-0 cursor-pointer
+                mr-0 px-0 cursor-pointer
                 text-blue-450
                 "
               variant={'link'}
