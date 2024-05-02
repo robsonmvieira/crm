@@ -1,7 +1,13 @@
+import { Input } from '@/components/ui/input'
+
 export default function Home() {
   return (
     <div>
-      <h1>Admin</h1>
+      <div>
+        <div>
+          <Input />
+        </div>
+      </div>
     </div>
   )
 }
