@@ -1,3 +1,8 @@
 {
-  "conventionalCommits.scopes": ["core", "sidebar", "tests"]
+  "conventionalCommits.scopes": [
+    "core",
+    "sidebar",
+    "tests",
+    "continuos integrations"
+  ]
 }
