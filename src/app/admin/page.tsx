@@ -4,6 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { useMemo } from 'react'
 import { Button } from '@/components/ui/button'
 import { NearestEventCard } from './components/nearestEventCard'
+import { WorkloadCard } from './components/workloadCard'
 
 export default function Home() {
   const today = useMemo(() => new Date(), [])
@@ -107,7 +108,18 @@ export default function Home() {
                 <ChevronRight className="w-6 h-6" />
               </Button>
             </div>
-            <div></div>
+            <div className="flex flex-wrap gap-4 w-full">
+              <WorkloadCard />
+              <WorkloadCard />
+              <WorkloadCard />
+              <WorkloadCard />
+              <WorkloadCard />
+              <WorkloadCard />
+              <WorkloadCard />
+              <WorkloadCard />
+              <WorkloadCard />
+              <WorkloadCard />
+            </div>
           </div>
 
           <div className="bg-white rounded-2xl p-6">
@@ -125,6 +137,7 @@ export default function Home() {
             </div>
 
             <div className="w-full mt-6 space-y-4">
+              <NearestEventCard />
               <NearestEventCard />
               <NearestEventCard />
               <NearestEventCard />
