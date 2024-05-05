@@ -6,17 +6,19 @@ export default defineConfig({
   plugins: [react()],
   test: {
     globals: true,
+    setupFiles: ['./vitest-setup.ts'],
+    reporters: ['verbose'],
     environment: 'jsdom',
-    include: ['src/**/*.{spec,test}.{js,ts,jsx,tsx}'], // Especifica onde os arquivos de teste estão localizados
+    include: ['src/**/*.{spec,test}.{js,ts,jsx,tsx}'],
     coverage: {
-      provider: 'istanbul', // ou 'istanbul', dependendo do que você preferir
-      include: ['src/**/*.{ts,jsx,tsx}'], // Inclui apenas arquivos dentro de src para cobertura
+      provider: 'istanbul',
+      include: ['src/**/*.{ts,jsx,tsx}'],
       exclude: [
         'src/**/components/ui/**/*.{ts,jsx,tsx}',
         'src/**/layout.tsx',
         'src/lib/*',
         'src/**/*.e2e-spec.ts'
-      ], // Inclui apenas
+      ],
       reporter: ['text', ['html', { subdir: 'coverage' }]]
     }
   },

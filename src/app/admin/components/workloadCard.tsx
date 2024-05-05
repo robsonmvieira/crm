@@ -24,6 +24,7 @@ function WorkloadCard() {
         <Image
           src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Picture of the author"
+          fetchPriority="high"
           width={64}
           height={64}
           className="rounded-full overflow-hidden w-16 h-16 object-cover max-w-16 max-h-16"
