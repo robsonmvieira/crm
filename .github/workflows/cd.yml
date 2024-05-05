@@ -9,20 +9,20 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-    - name: Install Dependencies
-      run: npm install  # Ou yarn install, se você estiver usando Yarn
+      - name: Install Dependencies
+        run: npm install # Ou yarn install, se você estiver usando Yarn
 
-    - name: Run Build
-      run: npm run build  # Ou yarn build
+      - name: Run Build
+        run: npm run build # Ou yarn build
 
-    - name: Vercel Deployment
-      uses: amondnet/vercel-action@v20
-      with:
-        vercel-token: ${{ secrets.VERCEL_TOKEN }}  # Usa o token armazenado nas secrets do GitHub
-        # vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}  # Opcional, depende de sua configuração
-        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}  # Opcional, depende de sua configuração
-        vercel-args: '--prod'  # Deploy em produção
+      - name: Vercel Deployment
+        uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }} # Usa o token armazenado nas secrets do GitHub
+          # vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}  # Opcional, depende de sua configuração
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }} # Opcional, depende de sua configuração
+          vercel-args: '--prod' # Deploy em produção
 
