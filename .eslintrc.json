@@ -12,7 +12,9 @@
     "plugin:react/recommended",
     "standard-with-typescript",
     "plugin:react-hooks/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "next",
+    "next/core-web-vitals"
   ],
   "overrides": [],
   "parserOptions": {
