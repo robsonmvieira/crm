@@ -1,4 +1,4 @@
-import Banner from './components/banner'
+import { Banner } from './components/banner'
 import { type Metadata } from 'next'
 
 export const metadata: Metadata = {

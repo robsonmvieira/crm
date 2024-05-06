@@ -3,6 +3,7 @@
     "core",
     "sidebar",
     "tests",
-    "continuos integrations"
+    "continuos integrations",
+    "ui"
   ]
 }

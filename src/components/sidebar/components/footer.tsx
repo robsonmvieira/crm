@@ -15,6 +15,7 @@ function SideBarFooter() {
       <div>
         <Image
           src={'/sidebar/sidebar-support.svg'}
+          fetchPriority="auto"
           width={168}
           height={214}
           alt="logo dashboard"

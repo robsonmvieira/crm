@@ -5,9 +5,16 @@ function Banner() {
     <div className="bg-blue-450 h-full min-h-screen w-full">
       <div className="mt-[60px] ml-24 flex flex-col gap-11">
         <div className="flex gap-7">
-          <Image src={'/shared/logo.svg'} width={56} height={56} alt="logo" />
+          <Image
+            src={'/shared/logo.svg'}
+            fetchPriority="low"
+            width={56}
+            height={56}
+            alt="logo"
+          />
           <Image
             src={'/banner-auth/Woorkroom.svg'}
+            fetchPriority="low"
             width={146}
             height={41}
             alt="logo title"
@@ -22,6 +29,7 @@ function Banner() {
         <div>
           <Image
             src={'/banner-auth/Illustration.svg'}
+            fetchPriority="low"
             width={500}
             height={373}
             alt="Illustration"
@@ -32,4 +40,6 @@ function Banner() {
   )
 }
 
-export default Banner
+export { Banner }
+
+Banner.displayName = 'BannerLogin'
