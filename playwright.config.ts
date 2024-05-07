@@ -11,7 +11,7 @@ export default defineConfig({
     baseURL: 'http://localhost:3000'
   },
   webServer: {
-    command: 'npm run test:e2e',
+    command: 'npm run dev',
     url: 'http://localhost:3000',
     reuseExistingServer: !process.env.CI
   },

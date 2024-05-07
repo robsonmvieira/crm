@@ -9,6 +9,7 @@ function TopMenu() {
           src={'/shared/logodash-logo.svg'}
           width={56}
           height={56}
+          fetchPriority="auto"
           alt="logo dashboard"
         />
       </div>

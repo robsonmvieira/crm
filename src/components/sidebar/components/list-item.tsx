@@ -29,6 +29,7 @@ function ListMenuItemSideBar({
           src={`${iconBasePath}${iconActivePath}`}
           width={24}
           height={24}
+          fetchPriority="auto"
           alt={alt ?? `icon ${title}`}
         />
         <span className="">{title}</span>
