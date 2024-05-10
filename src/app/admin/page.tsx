@@ -1,3 +1,4 @@
+'use client'
 import { Input } from '@/components/ui/input'
 import { Bell, ChevronDown, Search, Calendar, ChevronRight } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
@@ -5,6 +6,9 @@ import { useMemo } from 'react'
 import { Button } from '@/components/ui/button'
 import { NearestEventCard } from './components/nearestEventCard'
 import { WorkloadCard } from './components/workloadCard'
+
+import ProjectCard from './components/projectCard'
+import Activity from './components/activity'
 
 export default function Home() {
   const today = useMemo(() => new Date(), [])
@@ -57,7 +61,7 @@ export default function Home() {
           "
           />
         </div>
-        <div className="flex gap-10 items-center">
+        <div className="flex gap-6 items-center">
           <div className="bg-white rounded-2xl p-4">
             <Bell className="w-6 h-6" />
           </div>
@@ -67,7 +71,7 @@ export default function Home() {
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
             <span className="text-muted-foreground font-bold">Joe Doe</span>
-            <ChevronDown className="w-6 h-6" />
+            <ChevronDown className="w-6 h-6 cursor-pointer" />
           </div>
         </div>
       </div>
@@ -102,7 +106,7 @@ export default function Home() {
               </span>
               <Button
                 variant={'outline'}
-                className="hover:pl-4 hover:bg-none  hover:text-blue-500 border-none text-muted-foreground p-0 font-semibold text-base gap-5 flex text-blue-450"
+                className="hover:pl-4 hover:bg-none  hover:text-blue-500 border-none text-muted-foreground p-0 font-semibold text-base gap-2 flex text-blue-450"
               >
                 View All
                 <ChevronRight className="w-6 h-6" />
@@ -117,8 +121,8 @@ export default function Home() {
               <WorkloadCard />
               <WorkloadCard />
               <WorkloadCard />
-              <WorkloadCard />
-              <WorkloadCard />
+              {/* <WorkloadCard />
+              <WorkloadCard /> */}
             </div>
           </div>
 
@@ -129,7 +133,18 @@ export default function Home() {
               </span>
               <Button
                 variant={'outline'}
-                className="hover:pl-4 hover:bg-none  hover:text-blue-500 border-none text-muted-foreground p-0 font-semibold text-base gap-5 flex text-blue-450"
+                className="
+                hover:pl-4 
+                hover:bg-none  
+                hover:text-blue-500 
+                border-none 
+                text-muted-foreground 
+                p-0 
+                font-semibold
+                text-base 
+                gap-2 
+                flex 
+                text-blue-450"
               >
                 View All
                 <ChevronRight className="w-6 h-6" />
@@ -143,6 +158,40 @@ export default function Home() {
               <NearestEventCard />
             </div>
           </div>
+        </div>
+
+        <div className="mt-8 grid gap-8 grid-cols-[1fr_400px]">
+          <div className="">
+            <div className="flex w-full  items-center justify-between">
+              <span className="font-bold text-xl text-slate-900">Projects</span>
+              <Button
+                variant={'outline'}
+                className="
+                  hover:pl-4 
+                  hover:bg-none  
+                  hover:text-blue-500 
+                  border-none 
+                  text-muted-foreground 
+                  p-0 
+                  font-semibold 
+                  text-base 
+                  gap-2 
+                  flex 
+                  text-blue-450
+                  bg-transparent"
+              >
+                View All
+                <ChevronRight className="w-6 h-6" />
+              </Button>
+            </div>
+            {/* <ProjectsCard /> */}
+            <div className="w-full mt-5 space-y-5">
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+            </div>
+          </div>
+          <Activity />
         </div>
       </div>
     </div>
