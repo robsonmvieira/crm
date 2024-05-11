@@ -1,8 +1,4 @@
 'use client'
-import { ChevronRight } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { NearestEventCard } from './components/nearestEventCard'
-import { WorkloadCard } from './components/workloadCard'
 
 import Activity from './components/activity'
 import ProjectCardList from './components/project-card/projectCardList'
