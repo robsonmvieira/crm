@@ -1,26 +1,16 @@
 'use client'
 import { Input } from '@/components/ui/input'
-import { Bell, ChevronDown, Search, Calendar, ChevronRight } from 'lucide-react'
+import { Bell, ChevronDown, Search, ChevronRight } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { useMemo } from 'react'
 import { Button } from '@/components/ui/button'
 import { NearestEventCard } from './components/nearestEventCard'
 import { WorkloadCard } from './components/workloadCard'
 
-import ProjectCard from './components/projectCard'
 import Activity from './components/activity'
+import ProjectCardList from './components/project-card/projectCardList'
+import Welcome from './components/welcome'
 
 export default function Home() {
-  const today = useMemo(() => new Date(), [])
-  const formattedDate = useMemo(() => {
-    const date = Intl.DateTimeFormat('pt-BR', {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    }).format(today)
-    return date
-  }, [today])
   return (
     <div>
       {/* topbar */}
@@ -79,24 +69,7 @@ export default function Home() {
       {/* topbar */}
 
       <div className="mt-14">
-        <div>
-          <span className="text-muted-foreground font-light">
-            Welcome, Joe Doe!
-          </span>
-        </div>
-        <div className="flex justify-between items-center w-full mt-3">
-          <div>
-            <h4 className="text-2xl text-slate-800 font-bold">Dashboard</h4>
-          </div>
-          <div className="flex gap-4 bg-slate-250 rounded-2xl p-4">
-            <Calendar className="w-6 h-6" />
-            <div>
-              <span className="font-normal text-muted-foreground text-slate-900 leading-6">
-                {formattedDate}
-              </span>
-            </div>
-          </div>
-        </div>
+        <Welcome name={'Joe Doe'} currentRoute={'Dashboard'} />
 
         <div className="mt-8 grid gap-8 grid-cols-[1fr_400px]">
           <div className="bg-white rounded-2xl p-6">
@@ -184,12 +157,8 @@ export default function Home() {
                 <ChevronRight className="w-6 h-6" />
               </Button>
             </div>
-            {/* <ProjectsCard /> */}
-            <div className="w-full mt-5 space-y-5">
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-            </div>
+
+            <ProjectCardList />
           </div>
           <Activity />
         </div>
