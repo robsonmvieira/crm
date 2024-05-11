@@ -7,7 +7,7 @@
 .yarn/install-state.gz
 
 .history
-
+/.vscode
 # testing
 /coverage
 
